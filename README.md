@@ -177,7 +177,7 @@ Ex. 2:
 bundle exec rspec spec/tests/usuario_request.rb
 ```
 
-- Ou informar o comando abaixo para executar todas as features e/ou cenários do projeto:
+- Ou informar o comando abaixo para executar todas as features e/ou cenários do projeto (mesmo comando que é utilizado no "Passo 3" da "Pipeline Testes Automatizados API ServeRest Ruby" em ".github > workflows > [workflow-testes-automatizados-api-serve-rest-ruby.yml](https://github.com/AndressaKarla/testes-automatizados-api-serve-rest_ruby/blob/main/.github/workflows/workflow-testes-automatizados-api-serve-rest-ruby.yml)" no GitHub Actions)
 ```ruby
 bundle exec rspec spec/tests/*
 ```
