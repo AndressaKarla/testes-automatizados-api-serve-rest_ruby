@@ -1,0 +1,12 @@
+{
+    "admin_valido1": {
+        "nome_sobrenome_valido1": "Usuário Admin",
+        "email_valido1": "usuario.admin@gmail.com",
+        "senha_valida1": "teste1234"
+    },
+    "padrao_valido1": {
+        "nome_sobrenome_valido1": "Usuário Padrão",
+        "email_valido1": "usuario.padrao@outlook.com",
+        "senha_valida1": "teste1235"
+    }
+}
