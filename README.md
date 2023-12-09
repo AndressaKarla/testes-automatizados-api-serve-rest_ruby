@@ -1,5 +1,5 @@
 ---
-# :test_tube: Projeto de Testes Automatizados de API REST | Ruby | Rspec | HTTParty | GitHub Actions :test_tube:
+# Projeto de Testes Automatizados de API REST | Ruby | Rspec | HTTParty | GitHub Actions :test_tube:
 ---
 # :information_source: Introdução
 Esse projeto "testes-automatizados-api-serve-rest_ruby" é executado em um ambiente de desenvolvimento na ["API REST"](https://serverest.dev) do ["ServeRest"](https://github.com/ServeRest) que simula uma loja virtual, com o objetivo de me aprofundar um pouco mais nos estudos sobre testes automatizados de API REST em Ruby nas ferramentas Rspec, HTTParty e GitHub Actions.
@@ -14,7 +14,7 @@ Esse projeto "testes-automatizados-api-serve-rest_ruby" é executado em um ambie
 - Na janela aberta, escolher um diretório para baixar a pasta compactada "relatorio-api-serve-rest-ruby.zip"
 
 
-# :female_detective: Verificar no navegador padrão o relatório html gerado e armazenado anteriormente no GitHub Actions e descompactado no computador :male_detective: 
+# Verificar no navegador padrão o relatório html gerado e armazenado anteriormente no GitHub Actions e descompactado no computador :female_detective: 
 - Abrir uma janela do "Windows Explorer"
 - Acessar o diretório onde foi baixada a pasta compactada "relatorio-api-serve-rest-ruby.zip" anteriormente
 - Descompactar a pasta
@@ -23,7 +23,7 @@ Esse projeto "testes-automatizados-api-serve-rest_ruby" é executado em um ambie
 
 
 ---
-# :warning: Antes de clonar ou executar esse projeto localmente no computador, é necessário seguir as instruções abaixo :point_down:
+# Antes de clonar ou executar esse projeto localmente no computador, é necessário seguir as instruções abaixo :point_down:
 
 ## :hammer_and_wrench: Janela do "Windows Explorer" > aba "Exibir" e marcar algumas opções
 - Abrir uma janela do "Windows Explorer"
@@ -183,7 +183,7 @@ bundle exec rspec spec/tests/*
 ```
 
 ---
-# :female_detective: Verificar no navegador padrão o relatório html gerado anteriormente no computador :male_detective: 
+# Verificar no navegador padrão o relatório html gerado anteriormente no computador :female_detective: 
 
 ## :bookmark_tabs: Abrir o VS Code diretamente na pasta do projeto "testes-automatizados-api-serve-rest_ruby"
 - No cmder aberto anteriormente, informar o comando abaixo para abrir o VS Code diretamente na pasta do projeto "testes-automatizados-api-serve-rest_ruby"
