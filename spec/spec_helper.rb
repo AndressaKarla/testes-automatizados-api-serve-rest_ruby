@@ -13,15 +13,7 @@ RSpec.configure do |config|
   config.color = true
   config.formatter = :documentation
   
-  @environment = ENV['ENVIRONMENT']
-
-  if @environment.nil? 
-    @environment = 'dev'
-  end
-
-  if @environment.eql?('local')
-    @environment = 'local'
-  end
+  @environment = ENV['ENVIRONMENT'] || 'dev'
 
   CONFIG = YAML.load_file(File.dirname(__FILE__) + "/support/environments/#{@environment}.yml")
   puts "Ambiente >> #{@environment}"
