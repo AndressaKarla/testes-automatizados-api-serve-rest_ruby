@@ -69,7 +69,7 @@ Esse projeto "testes-automatizados-api-serve-rest_ruby" é executado em um ambie
 - Fechar esse terminal
 
 - Abrir um novo cmder ou outro terminal de preferência, informar o comando abaixo para confirmar se o ruby realmente foi instalado
-```ruby
+```
 ruby -v
 ```
 - E verificar se foi retornada a mesma versão do ruby+devkit instalada anteriormente:
@@ -80,10 +80,10 @@ ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [x64-mingw-ucrt]
 
 ## :hammer_and_wrench: Rspec versão 3.12.0 
 - No cmder aberto anteriormente, informar o comando abaixo para instalar o rspec versão 3.12.0
-```ruby
+```
 gem install rspec -v 3.12.0
 ```
-
+- Fechar esse cmder ou terminal
 
 ## :hammer_and_wrench: Baixar, instalar e configurar o git
 - Caso ainda não tenha o git baixado e instalado, acessar o site do [git](https://git-scm.com/download/win), baixar e instalar
@@ -94,7 +94,8 @@ gem install rspec -v 3.12.0
 - Abrir uma janela do "Windows Explorer"
 - Acessar o diretório onde será clonado o projeto "testes-automatizados-api-serve-rest_ruby"
 - Copiar esse diretório 
-- No cmder aberto anteriormente, informar o comando abaixo para acessar onde será clonado o projeto
+- Abrir um novo cmder
+- Informar o comando abaixo para acessar onde será clonado o projeto
 ```
 cd "<diretório copiado anteriormente>"
 ```
@@ -125,7 +126,7 @@ Ex.:
 C:\Users\usuario\Desktop\testes-automatizados-api-serve-rest_ruby
 ```
 - Informar o comando abaixo para instalar todas as dependências necessárias do projeto 
-```ruby
+```
 bundle install
 ```
 - Fechar esse cmder
@@ -140,13 +141,13 @@ bundle install
   - One Dark Pro
     - binaryify
       - Clicar na opção "One Dark Pro Darker" apresentada para habilitar a extensão
+  - Material Icon Theme
+    - Philipp Kief
+      - Clicar na opção "Material Icon Theme" apresentada para habilitar a extensão
   - Ruby 
     - Peng Lv
   - VsCode Ruby 
     - Stafford Brunk
-  - Material Icon Theme
-    - Philipp Kief
-      - Clicar na opção "Material Icon Theme" apresentada para habilitar a extensão
     
 - Fechar o VS Code
   
@@ -165,20 +166,20 @@ Ex.:
 cd "C:\Users\usuario\Desktop\testes-automatizados-api-serve-rest_ruby"
 ```
 - Informar o comando abaixo para executar cada feature individualmente do projeto:
-```ruby
+```
 bundle exec rspec spec/tests/nome_arquivo_request_test.rb
 ```
 Ex. 1:
-```ruby
+```
 bundle exec rspec spec/tests/login_test.rb
 ```
 Ex. 2: 
-```ruby
+```
 bundle exec rspec spec/tests/usuario_request.rb
 ```
 
 - Ou informar o comando abaixo para executar todas as features e/ou cenários do projeto (mesmo comando que é utilizado no "Passo 3" da "Pipeline Testes Automatizados API ServeRest Ruby" em ".github > workflows > [workflow-testes-automatizados-api-serve-rest-ruby.yml](https://github.com/AndressaKarla/testes-automatizados-api-serve-rest_ruby/blob/main/.github/workflows/workflow-testes-automatizados-api-serve-rest-ruby.yml)" no GitHub Actions)
-```ruby
+```
 bundle exec rspec spec/tests/*
 ```
 
