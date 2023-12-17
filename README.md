@@ -167,15 +167,15 @@ cd "C:\Users\usuario\Desktop\testes-automatizados-api-serve-rest_ruby"
 ```
 - Informar o comando abaixo para executar cada feature individualmente do projeto:
 ```
-bundle exec rspec spec/tests/nome_arquivo_request_test.rb
+bundle exec rspec spec/tests/nome_arquivo_test.rb
 ```
 Ex. 1:
 ```
-bundle exec rspec spec/tests/login_test.rb
+bundle exec rspec spec/tests/post_login_test.rb
 ```
 Ex. 2: 
 ```
-bundle exec rspec spec/tests/usuario_request.rb
+bundle exec rspec spec/tests/delete_usuario_test.rb
 ```
 
 - Ou informar o comando abaixo para executar todas as features e/ou cenários do projeto (mesmo comando que é utilizado no "Passo 3" da "Pipeline Testes Automatizados API ServeRest Ruby" em ".github > workflows > [workflow-testes-automatizados-api-serve-rest-ruby.yml](https://github.com/AndressaKarla/testes-automatizados-api-serve-rest_ruby/blob/main/.github/workflows/workflow-testes-automatizados-api-serve-rest-ruby.yml)" no GitHub Actions)
