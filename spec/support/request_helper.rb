@@ -8,4 +8,8 @@ module Requests
     def usuario
         @usuario ||= Usuario.new
     end 
+
+    def produto
+        @produto ||= Produto.new
+    end
 end
