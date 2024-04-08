@@ -1,2 +1,3 @@
-*.log
 Gemfile.lock
+spec/support/fixtures/*.json
+!spec/support/fixtures/*.example.json

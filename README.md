@@ -8,7 +8,7 @@ Esse projeto "testes-automatizados-api-serve-rest_ruby" é executado em um ambie
 # :dart: Executar testes automatizados de API REST em um ambiente de desenvolvimento, Gerar e armazenar relatório html no GitHub Actions 
 - Nesse repositório, acessar a aba "Actions"
 - Na seção "Actions", clicar em "Pipeline Testes Automatizados API ServeRest Postman"
-- Em "This workflow has a workflow_dispatch event trigger.", clicar em "Run workflow" > "Run workflow" para executar testes automatizados de API REST, gerar e armazenar relatório html no GitHub Actions
+- Em "This workflow has a workflow_dispatch event trigger.", clicar em "Run workflow" > "Run workflow" para executar testes automatizados de API REST, gerar e armazenar relatório html no GitHub Actions [com os conteúdos de "secrets.USUARIO_ENV", etc (baseado nos arquivos ["usuario.example.json"](https://github.com/AndressaKarla/testes-automatizados-api-serve-rest_ruby/tree/main/spec/support/fixtures/usuario.example.json), etc, e configurados na aba "Settings" desse repositório > "Secrets and variables" > "Actions" > "Secrets" > "Repository secrets") que foram redirecionados para os arquivos "usuario.json"]
 - Após o término da execução, clicar na run "Pipeline Testes Automatizados API ServeRest Postman"
 - Na seção "Artifacts", clicar em "relatorio-api-serve-rest-ruby"
 - Na janela aberta, escolher um diretório para baixar a pasta compactada "relatorio-api-serve-rest-ruby.zip"
@@ -76,13 +76,6 @@ ruby -v
 ```
 ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [x64-mingw-ucrt]
 ```
-
-
-## :hammer_and_wrench: Rspec versão 3.12.0 
-- No cmder aberto anteriormente, informar o comando abaixo para instalar o rspec versão 3.12.0
-```
-gem install rspec -v 3.12.0
-```
 - Fechar esse cmder ou terminal
 
 ## :hammer_and_wrench: Baixar, instalar e configurar o git
@@ -117,7 +110,7 @@ git clone git@github.com:AndressaKarla/testes-automatizados-api-serve-rest_ruby.
 
 
 ## :hammer_and_wrench: Instalar todas as dependências necessárias
-- No cmder aberto anteriormente, informar o comando abaixo para acessar o projeto “testes-automatizados-web-front-serve-rest_ruby” clonado anteriormente
+- No cmder aberto anteriormente, informar o comando abaixo para acessar o projeto “testes-automatizados-api-serve-rest_ruby” clonado anteriormente
 ```
 cd testes-automatizados-api-serve-rest_ruby
 ```
@@ -129,7 +122,6 @@ C:\Users\usuario\Desktop\testes-automatizados-api-serve-rest_ruby
 ```
 bundle install
 ```
-- Fechar esse cmder
 
 ## :hammer_and_wrench: Instalar as extensões no Visual Studio Code (VS Code)
 - Caso ainda não tenha o VS Code baixado e instalado, acessar o site do [Visual Studio Code](https://code.visualstudio.com/download), baixar e instalar com a opção "System Installer"
@@ -144,17 +136,29 @@ bundle install
   - Material Icon Theme
     - Philipp Kief
       - Clicar na opção "Material Icon Theme" apresentada para habilitar a extensão
-  - Ruby 
-    - Peng Lv
-  - VsCode Ruby 
-    - Stafford Brunk
-    
-- Fechar o VS Code
-  
+  - Simple Ruby ERB 
+    - Victor Ortiz Heredia
+
+## :bookmark_tabs: Abrir o VS Code diretamente na pasta do projeto "testes-automatizados-api-serve-rest_ruby"
+- No cmder aberto anteriormente, informar o comando abaixo para abrir o VS Code diretamente na pasta do projeto "testes-automatizados-api-serve-rest_ruby"
+```
+code .
+```
+- Aguardar o VS Code ser aberto
+- Fechar esse cmder
+- No VS Code aberto, caso seja apresentado "Do you trust the authors on the files in this folder?", marcar a opção "Trust the authors of all files in the parent folder ...."
+	- Clicar no botão "Yes, I trust the authors ...."
+
+## :hammer_and_wrench: Criar arquivos "usuario.json", informando os dados com base nos arquivos "usuario.example.json", etc
+- No VS Code aberto anteriormente, acessar "spec > support > fixtures"
+- Criar o arquivo "usuario.json"
+  - Informar os dados com base no arquivo ["usuario.example.json"](https://github.com/AndressaKarla/testes-automatizados-api-serve-rest_ruby/tree/main/spec/support/fixtures/usuario.example.json)
+  - Salvar o arquivo "usuario.json" com os dados informados anteriormente
+
 ---
 # :dart: Executar testes automatizados de API REST em um ambiente de desenvolvimento, Gerar e armazenar relatório html no computador
 - Abrir uma janela do "Windows Explorer"
-- Acessar o diretório onde foi clonado o projeto “testes-automatizados-web-front-serve-rest_ruby”
+- Acessar o diretório onde foi clonado o projeto “testes-automatizados-api-serve-rest_ruby”
 - Copiar esse diretório 
 - Abrir um novo cmder
 - Informar o comando abaixo para acessar o projeto "testes-automatizados-api-serve-rest_ruby"
@@ -178,22 +182,13 @@ Ex. 2:
 bundle exec rspec spec/tests/delete_usuario_test.rb
 ```
 
-- Ou informar o comando abaixo para executar todas as features e/ou cenários do projeto (mesmo comando que é utilizado no "Passo 3" da "Pipeline Testes Automatizados API ServeRest Ruby" em ".github > workflows > [workflow-testes-automatizados-api-serve-rest-ruby.yml](https://github.com/AndressaKarla/testes-automatizados-api-serve-rest_ruby/blob/main/.github/workflows/workflow-testes-automatizados-api-serve-rest-ruby.yml)" no GitHub Actions)
+- Ou informar o comando abaixo para executar todas as features e/ou cenários do projeto (mesmo comando que é utilizado no "Passo 4" do job "ruby-api-rest" da "Pipeline Testes Automatizados API ServeRest Ruby" em ".github > workflows > [workflow-testes-automatizados-api-serve-rest-ruby.yml](https://github.com/AndressaKarla/testes-automatizados-api-serve-rest_ruby/blob/main/.github/workflows/workflow-testes-automatizados-api-serve-rest-ruby.yml)" no GitHub Actions) e Gerar os resultados dos testes no computador:
 ```
 bundle exec rspec spec/tests/*
 ```
 
 ---
 # Verificar no navegador padrão o relatório html gerado anteriormente no computador :female_detective: 
-
-## :bookmark_tabs: Abrir o VS Code diretamente na pasta do projeto "testes-automatizados-api-serve-rest_ruby"
-- No cmder aberto anteriormente, informar o comando abaixo para abrir o VS Code diretamente na pasta do projeto "testes-automatizados-api-serve-rest_ruby"
-```
-code .
-```
-- No VS Code aberto, caso seja apresentado "Do you trust the authors on the files in this folder?", marcar a opção "Trust the authors of all files in the parent folder ...."
-	- Clicar no botão "Yes, I trust the authors ...."
-
 
 ## :bookmark_tabs: Relatório html no computador
 - No VS Code aberto anteriormente, acessar "relatorios > relatorio-api-serve-rest-ruby.html" 

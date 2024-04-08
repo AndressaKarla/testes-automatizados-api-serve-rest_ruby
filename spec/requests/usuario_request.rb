@@ -223,11 +223,11 @@ class Usuario
     end
 
     def post_usuario_padrao(nome_sobrenome, email, senha)
-        BaseApi.post('/usuarios', body: { nome: nome_sobrenome, email: email, password: senha, administrador: "false" }.to_json, headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' })
+        BaseApi.post('/usuarios', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: { nome: nome_sobrenome, email: email, password: senha, administrador: "false" }.to_json)
     end
 
     def post_usuario_admin(nome_sobrenome, email, senha)
-        BaseApi.post('/usuarios', body: { nome: nome_sobrenome, email: email, password: senha, administrador: "true" }.to_json, headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' })
+        BaseApi.post('/usuarios', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: { nome: nome_sobrenome, email: email, password: senha, administrador: "true" }.to_json)
     end
 
     def delete_usuario(id)
