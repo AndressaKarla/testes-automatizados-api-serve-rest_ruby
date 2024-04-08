@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  testes-automatizados-api-serve-rest-ruby:
+  ruby-api-rest:
     # agente de execução/runner do tipo máquina virtual bem enxuta, sem interface gráfica
     runs-on: ubuntu-latest
 
@@ -18,14 +18,18 @@ jobs:
       - name: Passo 1 - Obter cópia do código-fonte do repositório
         uses: actions/checkout@v3
 
-      - name: Passo 2 - Instalar ruby e Instalar dependências 
+      - name: Passo 2 - Redirecionar os conteúdos de "secrets.USUARIO_ENV", para os arquivos "usuario.json", etc
+        run: |
+          echo '${{ secrets.USUARIO_ENV }}' > ./spec/support/fixtures/usuario.json
+
+      - name: Passo 3 - Instalar ruby e Instalar dependências 
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1.2'
           # executa o comando bundle install e armazena as gems instaladas automaticamente
           bundler-cache: true
           
-      - name: Passo 3 - Executar testes automatizados de API REST em um ambiente de desenvolvimento e Gerar relatório html 
+      - name: Passo 4 - Executar testes automatizados de API REST em um ambiente de desenvolvimento e Gerar relatório html 
         run: bundle exec rspec spec/tests/*
    
       - name: Passo 5 - Armazenar relatório html
