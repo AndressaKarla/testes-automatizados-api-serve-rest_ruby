@@ -7,9 +7,9 @@ Esse projeto "testes-automatizados-api-serve-rest_ruby" é executado em um ambie
 ---
 # :dart: Executar testes automatizados de API REST em um ambiente de desenvolvimento, Gerar e armazenar relatório html no GitHub Actions 
 - Nesse repositório, acessar a aba "Actions"
-- Na seção "Actions", clicar em "Pipeline Testes Automatizados API ServeRest Postman"
+- Na seção "Actions", clicar em "Pipeline Testes Automatizados API ServeRest Ruby"
 - Em "This workflow has a workflow_dispatch event trigger.", clicar em "Run workflow" > "Run workflow" para executar testes automatizados de API REST, gerar e armazenar relatório html no GitHub Actions [com os conteúdos de "secrets.USUARIO_ENV", etc (baseado nos arquivos ["usuario.example.json"](https://github.com/AndressaKarla/testes-automatizados-api-serve-rest_ruby/tree/main/spec/support/fixtures/usuario.example.json), etc, e configurados na aba "Settings" desse repositório > "Secrets and variables" > "Actions" > "Secrets" > "Repository secrets") que foram redirecionados para os arquivos "usuario.json"]
-- Após o término da execução, clicar na run "Pipeline Testes Automatizados API ServeRest Postman"
+- Após o término da execução, clicar na run "Pipeline Testes Automatizados API ServeRest Ruby"
 - Na seção "Artifacts", clicar em "relatorio-api-serve-rest-ruby"
 - Na janela aberta, escolher um diretório para baixar a pasta compactada "relatorio-api-serve-rest-ruby.zip"
 
