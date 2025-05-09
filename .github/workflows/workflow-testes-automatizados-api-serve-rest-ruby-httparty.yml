@@ -1,0 +1,43 @@
+name: Pipeline Testes Automatizados API ServeRest Ruby HTTParty
+
+# executa o workflow toda vez que for realizado um push ou pull-request no repositório
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # permite também executar esse workflow manualmente na aba "Actions" do GitHub
+  workflow_dispatch:
+
+jobs:
+  ruby-api-rest:
+    # agente de execução/runner
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Passo 1 - Obter cópia do código-fonte do repositório
+        uses: actions/checkout@v4
+
+      - name: Passo 2 - Redirecionar os conteúdos de "secrets.USUARIO_ENV", para os fixtures "usuario.json", etc
+        run: echo '${{ secrets.USUARIO_ENV }}' > ./spec/support/fixtures/usuario.json
+
+      - name: Passo 3 - Instalar ruby versão 3.1.2 e Instalar dependências 
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1.2'
+          # executa o comando bundle install e armazena as gems instaladas automaticamente
+          bundler-cache: true
+          
+      - name: Passo 4 - Executar testes automatizados de API REST em um ambiente de produção e Gerar os resultados dos testes
+        run: bundle exec rspec spec/tests/*
+   
+      - name: Passo 5 - Armazenar os resultados dos testes em report html
+        # expressão condicional para que sempre seja executado independentemente dos resultados dos steps anteriores
+        if: ${{ always() }}      
+        uses: actions/upload-artifact@v4
+        with: 
+            name: ruby-httparty-api-serve-rest-report-html
+            path: ./reports/ruby-httparty-api-serve-rest-report-html.html
+            # armazena por 30 dias
+            retention-days: 30

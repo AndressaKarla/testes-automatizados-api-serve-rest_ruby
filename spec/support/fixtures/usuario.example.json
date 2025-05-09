@@ -1,10 +1,10 @@
 {
-    "admin_valido": {
+    "admin": {
         "nome_sobrenome_valido": "informar-nome-sobrenome-usuario-admin-valido",
-        "email_valido": "informar-email-usuario-admin-valido@gmail.com",
+        "email_valido": "informar-email-usuario-admin-valido@qa.com",
         "senha_valida": "informar-senha-usuario-admin-valido"
     },
-    "padrao_valido": {
+    "padrao": {
         "nome_sobrenome_valido": "informar-nome-sobrenome-usuario-padrao-valido",
         "email_valido": "informar-email-usuario-padrao-valido@outlook.com",
         "senha_valida": "informar-senha-usuario-padrao-valido"
