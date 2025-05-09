@@ -12,8 +12,8 @@ RSpec.configure do |config|
 
   config.color = true
   config.formatter = :documentation
-  
-  @environment = ENV['ENVIRONMENT'] || 'dev'
+
+  @environment = ENV['ENVIRONMENT'] || 'prod'
 
   CONFIG = YAML.load_file(File.dirname(__FILE__) + "/support/environments/#{@environment}.yml")
   puts "Ambiente >> #{@environment}"
@@ -35,6 +35,3 @@ RSpec.configure do |config|
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
 end
-
-
-
